@@ -1,15 +1,25 @@
-/**
-* Template Name: iPortfolio - v3.7.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* Arabic */
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Tajawal'), local('Tajawal-Regular'), url(assets/fonts/Iura6YBj_oCad4k1nzSBC45I.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+/* Latin */
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Tajawal'), local('Tajawal-Regular'), url(assets/fonts/Iura6YBj_oCad4k1nzGBCw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
+body{
+	font-family: 'Tajawal', sans-serif;}
+
   color: #272829;
 }
 
@@ -26,6 +36,17 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+.droid-arabic-naskh{font-family: 'Droid Arabic Naskh', serif;}
+
+.Ayah {
+  font-family: 'Droid Arabic Naskh', serif;
+  font-size: 28px;
+  direction: rtl;
+  padding: 5px;
+  text-align: justify;
+  word-spacing: 1px;
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button

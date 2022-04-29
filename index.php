@@ -26,8 +26,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="css.css" rel="stylesheet">
-  
+
+  <style>
+@import url('http://fonts.cdnfonts.com/css/ds-arabic');
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+
+</style>
   <!-- =======================================================
 
   ======================================================== -->
@@ -59,6 +63,7 @@
 
           <div class="col-lg-6 d-flex align-items-stretch">
             <div class="info">
+
           
               <div class="form-group col-md-12">
               <picture>
@@ -72,6 +77,7 @@
                   <input type="text" id="Name" placeholder="your name" class="form-control" style="margin-bottom: 10px;" />
                   <input type="button" value="أنشاء البطاقة" onclick="GenerateImage()" style="margin-bottom: 10px;" class="btn btn-primary" />
               </div>
+
             </div>
 
           </div>
@@ -89,7 +95,9 @@
                     <h5 class="modal-title" id="exampleModalLabel">Eid</h5>
                 </div>
                 <div class="modal-body">
-                    <canvas id="idCanvas" width="500" height="500" style="padding: 0 0 0 12%;"> </canvas>
+                  <picture>
+                    <canvas id="idCanvas" width="800" height="1334" > </canvas>
+                  </picture>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -116,6 +124,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="http://fonts.cdnfonts.com/css/ds-arabic" rel="stylesheet">
 
 
   <!-- Template Main JS File -->
@@ -136,10 +145,10 @@ function GenerateImage() {
     var imageObj = new Image();
     imageObj.src = "assets/img/eid.png"; 
     
-    context.drawImage(imageObj, 0, 0,500,500);
-    context.font = "24px Tajawal";
-    context.fillStyle  = '#DEA127';
-    context.fillText(From, 180, 480);//أحداثيات الأسم الأول 
+    context.drawImage(imageObj, 0, 0,800,1334);
+    context.font = "bold 36px Tajawal";
+    context.fillStyle  = '#00000';
+    context.fillText(From, 320, 1080);//أحداثيات الأسم الأول 
     
     //document.getElementById('canvasImg').setAttribute('crossOrigin', 'anonymous');
     $('#exampleModal').modal("show");
@@ -151,7 +160,7 @@ function Download() {
     var dataURL = canvas.toDataURL();
     link.download = "my-image.png";
     link.href = dataURL;
-    //alert(link.href);
+    // alert(link.href);
     link.click();
 }
 
